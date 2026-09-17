@@ -1,0 +1,1 @@
+quiet-score note: run 1 -- sampled 21 job logs across 17 runs (all tracked-workflow completed runs available in this fork); found 1 distinct noise signature (263x TT-NN aspell error) fixed via PR; residue was 5461/5462 lines and entirely GHA/git infra boilerplate, not code-emitted noise.

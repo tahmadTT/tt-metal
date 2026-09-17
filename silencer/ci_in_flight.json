@@ -1,0 +1,15 @@
+{
+  "entries": [
+    {
+      "branch": "silencer/aspell-dictionary-hyphen-word",
+      "pr": null,
+      "workflow": "merge-gate",
+      "run_id": null,
+      "dispatched": "2026-09-17",
+      "last_state": "requested",
+      "nonterminal_reported": false,
+      "reported": false,
+      "note": "PR number and dispatched run ID are unknown until the safe_outputs job runs after this turn. Next run's step 1 must search_pull_requests for an open [silencer] PR on this branch, resolve the dispatched merge-gate run via get_check_runs, and re-grep that run's check-doc job logs for: The word \"TT-NN\" is invalid"
+    }
+  ]
+}
