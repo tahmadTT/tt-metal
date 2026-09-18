@@ -16,7 +16,8 @@
     "35255459795",
     "35223646218",
     "35266138035",
-    "35272873334"
+    "35272873334",
+    "35316898504"
   ],
-  "note": "First Silencer run. All tracked workflows currently have only 0-1 completed runs in this fork (recently created, 2026-09-17). Job logs sampled were mostly lightweight CI/infra jobs (checkout, doc/spellcheck, sku-matrix generation) rather than full C++ builds or on-device test execution -- the fork has not yet accumulated build/test-execution history."
+  "note": "First Silencer run. All tracked workflows currently have only 0-1 completed runs in this fork (recently created, 2026-09-17). Job logs sampled were mostly lightweight CI/infra jobs (checkout, doc/spellcheck, sku-matrix generation) rather than full C++ builds or on-device test execution -- the fork has not yet accumulated build/test-execution history. | 2026-09-18 run: rechecked all tracked workflows; only new completed run since prior scan was pipeline-select-profiler run 35316898504 (single-card-profiler-tests pipeline). Its build-artifact/build-docker-image jobs mostly failed with a fork-specific Docker tag error (\"ERROR: invalid tag ghcr.io/tahmadTT/tt-metal/tt-metalium/tools/sfpi:...: repository name must be lowercase\") -- an environment/fork registry-naming issue caused by the forked repo owner tahmadTT containing no uppercase itself but combined path casing, not upstream tt-metal code, and out of Silencer scope. No host compile, JIT-kernel, or runtime logs were produced (build never reached compile step); residue was entirely GHA/git/docker-buildx infra boilerplate. No new noise signature to act on this run."
 }
