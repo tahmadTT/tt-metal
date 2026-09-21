@@ -1,143 +1,33 @@
 # Repo Assist Memory — tahmadTT/tt-metal
 
-## Repo status (as of 2026-09-20 04:55 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), and
-  `search_issues` (both a "Monthly Activity" title query and a generic `is:issue` query) —
-  **all return zero results, again**. Seventh consecutive run confirming this fork has zero
-  issues and zero PRs, open or closed.
-- Still not retrying `create_issue` for the Monthly Activity summary — the unresolved
-  "success but invisible" outcome from 2026-09-18 runs remains unexplained. Will only retry if
-  a human confirms visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-20 04:55 UTC.
+## Stable environment characteristic (confirmed across 13+ consecutive runs, 2026-09-18 → 2026-09-21)
+- This fork (`tahmadTT/tt-metal`) has **zero issues and zero pull requests**, open or closed.
+  Re-verified every run via `github list_issues` (state: all) and `list_pull_requests`
+  (state: all); both consistently return empty/zero results. Also cross-checked with
+  `search_issues` on several runs — same result.
+- No triage, investigation, fixing, stale-PR nudging, or welcoming is possible with nothing in
+  the repo to act on.
 
-## Repo status (as of 2026-09-19 20:41 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all) and `list_pull_requests` (state: all) —
-  **both return zero results, again**. Sixth consecutive run confirming this fork has zero
-  issues and zero PRs, open or closed.
-- Still not retrying `create_issue` for the Monthly Activity summary (unresolved "success but
-  invisible" outcome from 2026-09-18 runs remains unexplained). Will only retry if a human
-  confirms visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-19 20:41 UTC.
-
-## Repo status (as of 2026-09-19 15:54 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), and
-  `search_issues` (query: `repo:tahmadTT/tt-metal is:issue`) — **all return zero results, again**.
-  Fifth consecutive run confirming this fork has zero issues and zero PRs, open or closed.
-- Still not retrying `create_issue` for the Monthly Activity summary (confirmed environment
-  limitation from 2026-09-18 runs: two prior `create_issue` calls returned success but the issue
-  never became visible via list/search on any subsequent run). Will only retry if a human
-  confirms visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-19 15:54 UTC.
-
-## Repo status (as of 2026-09-19 04:39 UTC)
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), AND
-  `search_issues` (query: `repo:tahmadTT/tt-metal is:issue`) — **all return zero results, again**.
-  This is the third consecutive run (after 2026-09-18 20:56 UTC and earlier) confirming this fork
-  has zero issues and zero PRs, open or closed.
-- Per prior memory guidance, did NOT retry `create_issue` for the Monthly Activity summary a third
-  time — two earlier runs (11:16 UTC, 16:26 UTC) got `{"result":"success"}` from `create_issue` but
-  the issue never became visible via list/search on any subsequent run. This is now a stable,
-  confirmed environment characteristic of this fork (safe-output writes not landing/visible here).
-  Will only revisit if a human/maintainer confirms the issue is actually visible on GitHub, or
-  explains the discrepancy in a comment somewhere I can see.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome).
-
-## Repo status (as of 2026-09-18 20:56 UTC)
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), AND
-  `search_issues` (query: `repo:tahmadTT/tt-metal is:issue`, and a title-specific query for
-  "Monthly Activity") — **all return zero results**. This fork has zero issues and zero PRs,
-  open or closed, confirmed via both the list and search APIs (not just list_issues, which could
-  theoretically miss something search would catch — it doesn't; both agree on 0).
-- No triage, investigation, fixes, stale-PR nudges, or welcomes were possible.
-
-## Monthly Activity Summary issue — known environment limitation (do not keep retrying)
-- Prior runs (2026-09-18 11:16 UTC and 16:26 UTC) both reported `create_issue` returning
-  `{"result":"success"}` for `[repo-assist] Monthly Activity 2026-09` (label `automation`), but a
-  follow-up `list_issues`/`search_issues` check in this run (20:56 UTC) STILL finds zero issues in
-  the repo. This is now two consecutive "success but invisible" results.
-- Conclusion: per this memory's own prior guidance, do NOT re-issue `create_issue` a third time.
-  Treat this as a confirmed environment limitation — either safe-output issue creation isn't
-  actually landing in this fork, or reads (list/search) in this sandbox can't see safe-output
-  writes. Do not keep retrying every run; this would just create silent duplicate write-intents
-  with no way to verify outcome.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, and re-attempting the Monthly Activity issue creation a
-  third time is explicitly discouraged by this memory until a human confirms the issue is visible
-  on GitHub or explains the discrepancy).
+## Monthly Activity Summary issue — known environment limitation
+- Two early attempts (2026-09-18, ~11:16 and ~16:26 UTC) to `create_issue` for
+  `[repo-assist] Monthly Activity 2026-09` both returned `{"result":"success"}`, but the issue
+  never became visible via `list_issues`/`search_issues` on any subsequent run (13+ checks since).
+- Decision: do NOT retry `create_issue` for this purpose again. Treat as a confirmed, stable
+  environment limitation (safe-output issue creation not landing/visible in this fork's read
+  path). Only revisit if a human/maintainer explicitly confirms the issue is visible on GitHub,
+  or explains the discrepancy in a way this agent can observe.
 
 ## Backlog cursors
-- Task 1 (labelling) cursor: none — no issues exist.
-- Task 2 (investigate/comment) cursor: none — no issues exist.
-- Task 6 (stale PR nudge) last-action timestamps: none — no PRs exist.
-- Task 7 (welcome) — no PRs/issues to check.
+- Task 1 (labelling): none — no issues exist.
+- Task 2 (investigate/comment): none — no issues exist.
+- Task 6 (stale PR nudge): none — no PRs exist.
+- Task 7 (welcome): none — no PRs/issues exist.
 
 ## Notes for next run
-- Re-check `list_issues`/`list_pull_requests`/`search_issues` with `state: all` at the start of
-  each run — this fork may get issues/PRs mirrored or created between runs (by humans or CI).
-- Do NOT retry `create_issue` for the Monthly Activity summary again until either (a) it becomes
-  visible via list/search, or (b) a human/maintainer comments explaining the discrepancy. If still
-  empty next run too, this is now a stable, confirmed environment characteristic of this fork —
-  just note it briefly and move on to `noop` if nothing else is actionable.
-- Last checked: 2026-09-20 04:55 UTC (still zero issues/PRs; still not retrying create_issue).
-
-## Repo status (as of 2026-09-19 10:59 UTC)
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), and
-  `search_issues` (query: `repo:tahmadTT/tt-metal is:issue`) — **all return zero results, again**.
-  Fourth consecutive run confirming this fork has zero issues and zero PRs, open or closed.
-- No command-mode instructions were provided this run (empty string) — followed normal
-  scheduled workflow.
-- Per prior memory guidance, did NOT retry `create_issue` for the Monthly Activity summary again
-  (two earlier "success but invisible" results are still unexplained/unconfirmed by a human).
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-19 10:59 UTC.
-
-## Repo status (as of 2026-09-20 11:24 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all), `list_pull_requests` (state: all), and
-  `search_issues` (query: `repo:tahmadTT/tt-metal is:issue`) — **all return zero results, again**.
-  Eighth+ consecutive run confirming this fork has zero issues and zero PRs, open or closed.
-- Also tried a broader `search_issues` without the `repo:` qualifier out of curiosity (query:
-  `in:title Monthly Activity Repo Assist`) — this returned unrelated results from other
-  repositories (large payload redirected to a file), confirming the search API itself works fine;
-  it's specifically `repo:tahmadTT/tt-metal` that has nothing. Not useful for this fork's state.
-- Still not retrying `create_issue` for the Monthly Activity summary — the unresolved
-  "success but invisible" outcome from 2026-09-18 runs remains unexplained. Will only retry if
-  a human confirms visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-20 11:24 UTC.
-
-## Repo status (as of 2026-09-20 16:07 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all) and `list_pull_requests` (state: all) —
-  **both return zero results, again**. 10th+ consecutive run confirming this fork has zero
-  issues and zero PRs, open or closed.
-- Still not retrying `create_issue` for the Monthly Activity summary — unexplained "success but
-  invisible" outcome from 2026-09-18 remains unresolved. Will only retry if a human confirms
-  visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-20 16:07 UTC.
-
-## Repo status (as of 2026-09-20 20:50 UTC)
-- No command-mode instructions provided (empty string) — followed normal scheduled workflow.
-- Re-verified via `github list_issues` (state: all) and `list_pull_requests` (state: all) —
-  **both return zero results, again**. 11th+ consecutive run confirming this fork has zero
-  issues and zero PRs, open or closed.
-- Still not retrying `create_issue` for the Monthly Activity summary — unexplained "success but
-  invisible" outcome from 2026-09-18 remains unresolved. Will only retry if a human confirms
-  visibility or explains the discrepancy.
-- Action taken this run: called `noop` (no other safe-output tool applicable — nothing to
-  triage/comment/label/fix/nudge/welcome, repo genuinely has zero issues/PRs).
-- Last checked: 2026-09-20 20:50 UTC.
+- Always re-check `list_issues` / `list_pull_requests` (state: all) fresh at the start of each
+  run — do not assume based on this memory alone; the repo could receive issues/PRs at any time.
+- If issues/PRs ever appear, resume normal Task 1-7 workflow immediately; this "empty repo" state
+  is not expected to be permanent.
+- Keep this memory file concise - summarize the stable state rather than appending a new
+  timestamped block every run, to avoid unbounded growth.
+- Last checked: 2026-09-21 04:56 UTC - confirmed zero issues, zero PRs (14th+ consecutive run).
