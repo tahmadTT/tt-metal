@@ -3,5 +3,5 @@
     "Residue channel (residue_top.txt) was dominated by generic Actions/git-checkout infrastructure noise (git config cleanup, 'Updating files: N%', runner provisioning) in this scan -- none of it is code-emitted noise in scope for Silencer. No further category-1/4/5/6 candidates were found in the sampled jobs because this fork's tracked workflows have almost no completed runs yet (see scanned_runs.json note).",
     "Once this fork accumulates real build-artifact / test-execution runs (host C++ compiles, JIT device-kernel compiles, on-device test runs), re-scan pr-gate/merge-gate build jobs for -Wunused-but-set-variable and t3000-unit-tests/runtime-unit-tests test-execution logs for JIT/runtime/log-spam categories 2/3/5/6, per the workflow's category-1 hint (normalization/layernorm, operations/matmul, operations/eltwise/binary_ng)."
   ],
-  "last_updated": "2026-09-17"
+  "last_updated": "2026-09-21"
 }
