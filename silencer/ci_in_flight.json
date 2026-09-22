@@ -11,5 +11,5 @@
       "reported": false
     }
   ],
-  "note": "2026-09-22 run 9: opened new [silencer] PR for the aspell TT-NN dictionary fix (branch silencer/aspell-dictionary-hyphen-word) and dispatched merge-gate for validation. PR number and run ID are unknown until the safe_outputs job runs after this turn -- next run must resolve via search_pull_requests + pull_request_read(get_check_runs) before it can report an outcome."
+  "note": "2026-09-22 run 10: opened new [silencer] PR (create_pull_request succeeded) for the aspell TT-NN dictionary fix (branch silencer/aspell-dictionary-hyphen-word, replacing invalid TT-NN entry with NN) and dispatched merge-gate for validation (dispatch_workflow succeeded). PR number and run ID are unknown until the safe_outputs job runs after this turn -- next run must resolve via search_pull_requests + pull_request_read(get_check_runs) before it can report an outcome."
 }
