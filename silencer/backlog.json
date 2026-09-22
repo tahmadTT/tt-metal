@@ -1,7 +1,7 @@
 {
   "next_candidates": [
-    "Residue channel (residue_top.txt) was dominated by generic Actions/git-checkout infrastructure noise (git config cleanup, 'Updating files: N%', runner provisioning) in this scan -- none of it is code-emitted noise in scope for Silencer. No further category-1/4/5/6 candidates were found in the sampled jobs because this fork's tracked workflows have almost no completed runs yet (see scanned_runs.json note).",
-    "Once this fork accumulates real build-artifact / test-execution runs (host C++ compiles, JIT device-kernel compiles, on-device test runs), re-scan pr-gate/merge-gate build jobs for -Wunused-but-set-variable and t3000-unit-tests/runtime-unit-tests test-execution logs for JIT/runtime/log-spam categories 2/3/5/6, per the workflow's category-1 hint (normalization/layernorm, operations/matmul, operations/eltwise/binary_ng)."
+    "aspell TT-NN dictionary fix has now been opened as a PR (branch silencer/aspell-dictionary-hyphen-word) -- next run should resolve via search_pull_requests/pull_request_read whether it merged/failed before picking any further category-1/4/5/6 target from a fresh scan.",
+    "Residue channel in prior scans was dominated by generic Actions/git-checkout infrastructure noise -- none in scope. Once this fork accumulates real build-artifact / test-execution runs (host C++ compiles, JIT device-kernel compiles, on-device test runs), re-scan pr-gate/merge-gate build jobs for -Wunused-but-set-variable and t3000-unit-tests/runtime-unit-tests test-execution logs for JIT/runtime/log-spam categories 2/3/5/6, per the workflow category-1 hint (normalization/layernorm, operations/matmul, operations/eltwise/binary_ng)."
   ],
-  "last_updated": "2026-09-21"
+  "last_updated": "2026-09-22"
 }
