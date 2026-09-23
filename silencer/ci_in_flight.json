@@ -5,11 +5,11 @@
       "pr": null,
       "workflow": "merge-gate",
       "run_id": null,
-      "dispatched": "2026-09-22",
+      "dispatched": "2026-09-23",
       "last_state": "requested",
       "nonterminal_reported": false,
       "reported": false
     }
   ],
-  "note": "2026-09-22 run 10: opened new [silencer] PR (create_pull_request succeeded) for the aspell TT-NN dictionary fix (branch silencer/aspell-dictionary-hyphen-word, replacing invalid TT-NN entry with NN) and dispatched merge-gate for validation (dispatch_workflow succeeded). PR number and run ID are unknown until the safe_outputs job runs after this turn -- next run must resolve via search_pull_requests + pull_request_read(get_check_runs) before it can report an outcome."
+  "note": "2026-09-23 run 12: reconfirmed via search_pull_requests (is:pr [silencer] aspell, and is:pr is:open silencer) that no open [silencer] PR exists for the aspell branch -- prior runs 9/10's PR creation apparently never materialized despite tool success responses (consistent with run 11's finding). Root-caused via a fresh merge-gate run (35223647011, job 105209668551, check-doc): 263 occurrences in the last 5000 log lines of 'The word \"TT-NN\" is invalid. The character (U+2D) may not appear in the middle of a word.' -- confirmed docs/aspell-dictionary.pws on current origin/main still has the invalid TT-NN entry (line 153) with no NN entry present. Re-created branch silencer/aspell-dictionary-hyphen-word from fresh origin/main, replaced TT-NN with NN (alphabetically positioned next to NCRISC/NCRISCs), committed, called create_pull_request (result: success, patch recorded) and dispatched merge-gate on that branch (result: success). PR number and run ID unknown until safe_outputs job runs after this turn -- next run must resolve via search_pull_requests + pull_request_read(get_check_runs) before reporting an outcome, and if still absent should investigate why prior successful-looking create_pull_request calls (runs 9, 10, and now 12) do not appear to produce a discoverable open PR in this fork."
 }
